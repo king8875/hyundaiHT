@@ -208,8 +208,8 @@ $personal_color : #e60044;
     display: flex;
     flex-direction: column;
     padding-left: 33.3vw;
-    .sec02_article_right:nth-child(1) { background: url(/assets/img/section02_bg02.jpg)no-repeat 70% 50%; }
-    .sec02_article_right:nth-child(2) { background: url(/assets/img/section02_bg03.jpg)no-repeat 70% 50%; }
+    .sec02_article_right:nth-child(1) { background: url(../img/section02_bg02.jpg)no-repeat 70% 50%; }
+    .sec02_article_right:nth-child(2) { background: url(../img/section02_bg03.jpg)no-repeat 70% 50%; }
 }
 .sec02_article_right {
     position: relative;
@@ -341,7 +341,7 @@ $personal_color : #e60044;
 .sec03-list {
     .sec03-item:first-child {
         grid-column: 2;
-        background: black url(/assets/img/sec03_T.png) no-repeat 100% 0%;
+        background: black url(../img/sec03_T.png) no-repeat 100% 0%;
         background-size: 60% 60%;
     }
     .sec03-item:nth-child(2) {
@@ -349,7 +349,7 @@ $personal_color : #e60044;
         background-size: cover;
     }
     .sec03-item:last-child {
-        background: $personal_color url(/assets/img/sec03_H.png) no-repeat 100% 0%;
+        background: $personal_color url(../img/sec03_H.png) no-repeat 100% 0%;
         background-size: 60% 60%;
     }
 }
@@ -379,19 +379,19 @@ $personal_color : #e60044;
         }
 
         .sec04_item:nth-child(1) .sec04_img_con {
-            background: url(/assets/img/sec04_img01.jpg) no-repeat;
+            background: url(../img/sec04_img01.jpg) no-repeat;
             background-size: cover;
         }
         .sec04_item:nth-child(2) .sec04_img_con {
-            background: url(/assets/img/sec04_img02.jpg) no-repeat;
+            background: url(../img/sec04_img02.jpg) no-repeat;
             background-size: cover;
         }
         .sec04_item:nth-child(3) .sec04_img_con {
-            background: url(/assets/img/sec04_img03.jpg) no-repeat;
+            background: url(../img/sec04_img03.jpg) no-repeat;
             background-size: cover;
         }
         .sec04_item:nth-child(4) .sec04_img_con {
-            background: url(/assets/img/sec04_img04.png) no-repeat;
+            background: url(../img/sec04_img04.png) no-repeat;
             background-size: cover;
         }
     }
@@ -438,7 +438,7 @@ $personal_color : #e60044;
     height: 50%;
 }
 .sec04_bottom_bg {
-    background: url(/assets/img/main_invest_bg.jpg) no-repeat 50% 50%;
+    background: url(../img/main_invest_bg.jpg) no-repeat 50% 50%;
     position: absolute;
     top: 0;
     left: 0;
@@ -560,7 +560,7 @@ $personal_color : #e60044;
     align-items: center;
     gap: 10vw;
     padding: 100px 0;
-    background: url(/assets/img/main_brand_video_bg.jpg)no-repeat;
+    background: url(../img/main_brand_video_bg.jpg)no-repeat;
     background-size: cover;
     color: var(--black);
 }
@@ -756,7 +756,7 @@ $personal_color : #e60044;
         gap: 5vw;
         padding-top: 10vh;
         padding-left: 10vw;
-        background: url(../src/img/hyundai/main_brand_video_bg.jpg)no-repeat;
+        background: url(../img/main_brand_video_bg.jpg)no-repeat;
         background-size: cover;
     }
 
@@ -769,7 +769,6 @@ $personal_color : #e60044;
         align-items: center;
         color: #bbb;
         overflow: hidden;
-
     }
 
 }
@@ -783,7 +782,7 @@ $personal_color : #e60044;
         position: relative;
         width: 100%;
         height: 33vh;
-        background: url(/assets/img/section02_bg01_m.jpg)no-repeat 70% 50%;
+        background: url(../img/section02_bg01_m.jpg)no-repeat 70% 50%;
         background-size: cover;
     }
 
@@ -791,11 +790,11 @@ $personal_color : #e60044;
         padding-left: 0px;
         .sec02_article_right:nth-child(1) {
             height: 33vh;
-            background: url(/assets/img/section02_bg02_m.jpg)no-repeat 70% 50%;
+            background: url(../img/section02_bg02_m.jpg)no-repeat 70% 50%;
         }
         .sec02_article_right:nth-child(2) {
             height: 33vh;
-            background: url(/assets/img/section02_bg03_m.jpg)no-repeat 70% 50%;
+            background: url(../img/section02_bg03_m.jpg)no-repeat 70% 50%;
         }
     }
     .sec02_article_right { width: 100%; }
