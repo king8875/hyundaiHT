@@ -258,6 +258,10 @@
   height: 100vh;
 }
 
+.section02 article {
+  visibility: hidden;
+}
+
 .sec02_article_left {
   position: absolute;
   top: 0;
@@ -366,6 +370,11 @@
   position: absolute;
   top: 100px;
   left: 100px;
+}
+
+.sec03_text_con,
+.sec03-item {
+  visibility: hidden;
 }
 
 .sec03-tit {
@@ -763,15 +772,7 @@
     transform: rotate(180deg);
   }
 }
-@media screen and (max-width: 1520px) {
-  .second .footer_right {
-    display: none;
-  }
-}
 @media screen and (max-width: 1300px) {
-  .gnb {
-    display: none;
-  }
   .main_title {
     font-size: 2.5em;
     font-weight: 900;
@@ -794,7 +795,10 @@
 }
 @media screen and (max-width: 1030px) {
   .bg_video_text_con {
+    display: flex;
+    flex-direction: column;
     font-size: 38px;
+    padding-bottom: 100px;
   }
   .sec02_sub {
     font-size: 24px;
@@ -855,146 +859,93 @@
     overflow: hidden;
   }
 }
-@media screen and (max-width: 835px) {
-  .bg_video_text_con {
-    justify-content: start;
-    align-items: end;
-    font-size: 24px;
-    bottom: 100px;
-  }
-  .bg_video_text_con img {
-    width: 100px;
-  }
+@media screen and (max-width: 786px) {
   .section02_wrapper {
-    display: flex;
     flex-direction: column;
   }
   .sec02_article_left {
     position: relative;
     width: 100%;
     height: 33vh;
-    background: url(../src/img/hyundai/section02_bg01_m.jpg) no-repeat 70% 50%;
+    background: url(/assets/img/section02_bg01_m.jpg) no-repeat 70% 50%;
     background-size: cover;
   }
   .sec02_right_con {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
     padding-left: 0px;
   }
   .sec02_right_con .sec02_article_right:nth-child(1) {
     height: 33vh;
-    background: url(../src/img/hyundai/section02_bg02_m.jpg) no-repeat 70% 50%;
+    background: url(/assets/img/section02_bg02_m.jpg) no-repeat 70% 50%;
   }
   .sec02_right_con .sec02_article_right:nth-child(2) {
     height: 33vh;
-    background: url(../src/img/hyundai/section02_bg03_m.jpg) no-repeat 70% 50%;
+    background: url(/assets/img/section02_bg03_m.jpg) no-repeat 70% 50%;
   }
   .sec02_article_right {
-    position: relative;
     width: 100%;
-    background-size: cover;
   }
-  .sec02_text,
-  .sec02_text01,
-  .sec02_text02 {
+  .sec02_text-block {
     position: absolute;
-    top: 10px;
-    left: 20px;
+    top: 50px;
+    left: 50px;
   }
-  .sec02_title {
-    font-size: 14px;
-  }
-  .sec02_sub {
-    font-size: 18px;
-    line-height: 25px;
-    margin-bottom: 150px;
+  .sec02_text-block > div {
+    margin-bottom: 10px;
   }
   .sec02_plus {
-    width: 45px;
-    height: 45px;
+    display: none;
   }
-  .sec02_plus #plus_icon {
-    font-weight: 100;
-    font-size: 18px;
-  }
-  .section03_text_wrapper {
-    top: 20px;
-    left: 10px;
-  }
-  .section03_text_wrapper .sec03_text01_con p {
-    color: #e60044;
-    font-weight: 600;
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  .section03_text_wrapper .sec03_text01_con h1 {
-    font-size: 3em;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.5em;
-  }
-  .section03_text_wrapper .sec03_text01_con h4 {
-    font-size: 2em;
-    color: #eee;
-    letter-spacing: -1px;
-    margin-bottom: 1em;
-  }
-  .section03_text_wrapper .sec03_text02_con p {
-    font-size: 2em;
-    line-height: 1.5;
-  }
-  .section03_text_wrapper .sec03_text02_con p:nth-child(2) {
-    margin-bottom: 0;
-  }
-  .section03_text_wrapper .sec03_text02_con span {
-    font-weight: 600;
+  .sec02_plus_box {
+    opacity: 1;
   }
   .section03_img_wrapper {
     position: absolute;
-    left: 20px;
-    bottom: 20px;
+    right: 0px;
+    bottom: 30px;
+    width: 100%;
   }
-  .section03_img_wrapper ul {
+  .section03_img_wrapper .sec03-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
   }
-  .section03_img_wrapper li {
-    position: relative;
+  .section03_img_wrapper .sec03-item {
     width: 100%;
     height: 150px;
   }
-  .section03_img_wrapper li span {
+  .section03_img_wrapper .sec03-item span {
     position: absolute;
-    bottom: 30px;
-    left: 30px;
-    font-size: 28px;
-    font-weight: 900;
-    color: #fff;
+    bottom: 10px;
+    left: 10px;
   }
-  .sec03_ul_div01,
-  .sec03_ul_div02 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  .section03_text_wrapper {
+    top: 50px;
+    left: 50px;
   }
-  .sec03_ul_div01 li {
-    /* background: $personal_color url(../src/img/hyundai/sec03_H.png) no-repeat 100% 0%; */
-    background-size: 20% 50%;
+  .sec03-list .sec03-item:first-child {
+    background-size: 20% 100%;
   }
-  .sec03_ul_div01 .line_break {
-    white-space: normal;
+  .sec03-list .sec03-item:last-child {
+    background-size: 20% 100%;
   }
-  .sec03_ul_div02 li:nth-child(1) {
-    background: black url(../src/img/hyundai/sec03_T.png) no-repeat 100% 0%;
-    background-size: 20% 50%;
+  .sec03-tit {
+    font-size: 2em;
   }
-  .sec03_ul_div02 li:nth-child(2) {
-    background: black url(../src/img/hyundai/brand_smart_life_bg.jpg) no-repeat 100% 0%;
-    background-size: cover;
+  .sec03-subtit {
+    font-size: 2em;
   }
-  .sec03_ul_div02 .line_break {
-    white-space: normal;
+  .sec03-txcontent {
+    font-size: 1em;
+  }
+  .sec04_bottom_item {
+    width: 130px;
+    height: 130px;
+  }
+  .sec05_video_con #sec05_video {
+    width: 100%;
+    height: auto;
+  }
+  .footer_item.second {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */

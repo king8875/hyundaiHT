@@ -126,4 +126,15 @@
 .red_bg_hover {
   height: 500px;
   transition: all 0.1s;
+}
+
+@media screen and (max-width: 1400px) {
+  .gnb {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header_btn .header_btn--link {
+    display: none;
+  }
 }/*# sourceMappingURL=layout.css.map */
