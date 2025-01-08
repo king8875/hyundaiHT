@@ -28,6 +28,8 @@ $personal_color : #e60044;
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     background-color: var(--black);
@@ -192,7 +194,9 @@ $personal_color : #e60044;
 
 .section02_wrapper {
     display: flex;
+    width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 .section02 article{ visibility: hidden; }
 .sec02_article_left {
@@ -215,7 +219,7 @@ $personal_color : #e60044;
     position: relative;
     height: auto;
     height: 50%;
-    width: 66.67vw;
+    width: 66.5vw;
     background-size: cover;
 }
 .sec02_text-block{
@@ -357,14 +361,10 @@ $personal_color : #e60044;
 // section04 css
 .sec04_wrapper {
     position: relative;
-    width: 100vw;
     height: 100vh;
-    background: #ccc;
 }
 .sec04_top {
-    position: absolute;
-    top: 0;
-    left: 0;
+   
 
     .sec04_top_list {
         display: flex;
@@ -373,8 +373,7 @@ $personal_color : #e60044;
 
         .sec04_item {
             position: relative;
-            width: 25vw;
-            height: auto;
+            width: calc(100% / 4);
             overflow: hidden;
         }
 
@@ -404,6 +403,11 @@ $personal_color : #e60044;
     width: 100%;
     height: 100%;
     transition: all 0.5s;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 .sec04_top_text {
     position: absolute;
@@ -591,7 +595,9 @@ $personal_color : #e60044;
 }
 
 // footer css
-.footer { }
+.footer { 
+    position: relative;
+}
 .footer-wrapper{
     display: flex;
     justify-content: space-between;
@@ -666,35 +672,22 @@ $personal_color : #e60044;
 
 // media screen
 @media screen and (max-width : 1300px) {
-    
-
     .main_title {
         font-size: 2.5em;
         font-weight: 900;
         letter-spacing: -0.5px;
         margin-bottom: 20px;
     }
-
-    .title_red {
-        font-size: 12px;
-    }
-
+    .title_red { font-size: 12px; }
     .sec05_video_con {
         #sec05_video {
             width: 670px;
             height: 333px;
-
         }
     }
-
     .first {
-        .footer_left {
-            flex-direction: column;
-        }
-
-        .footer_right {
-            flex-direction: column;
-        }
+        .footer_left { flex-direction: column; }
+        .footer_right { flex-direction: column; }
     }
 }
 
@@ -705,11 +698,7 @@ $personal_color : #e60044;
         font-size: 38px;
         padding-bottom: 100px;
     }
-
-    .sec02_sub {
-        font-size: 24px;
-    }
-
+    .sec02_sub { font-size: 24px; }
     .sec04_bottom_content {
         width: 100%;
         height: 100%;
@@ -721,13 +710,11 @@ $personal_color : #e60044;
         gap: 10px;
         padding: 20px 0 50px 50px;
     }
-
     .sec04_wrapper {
         position: relative;
         width: 100vw;
         height: 100vh;
     }
-
     .sec04_bottom_item {
         width: 150px;
         height: 150px;
@@ -739,7 +726,6 @@ $personal_color : #e60044;
         align-items: center;
         gap: 20px;
         transition: all 0.5s;
-
         p {
             font-size: 20px;
             font-weight: 600;
@@ -747,7 +733,6 @@ $personal_color : #e60044;
             opacity: 0.9;
         }
     }
-
     .sec05_wrapper {
         display: flex;
         flex-direction: column;
@@ -759,7 +744,6 @@ $personal_color : #e60044;
         background: url(../img/main_brand_video_bg.jpg)no-repeat;
         background-size: cover;
     }
-
     .footer_item {
         position: relative;
         border-top: 1px solid rgb(164, 164, 164, 0.5);
@@ -770,14 +754,10 @@ $personal_color : #e60044;
         color: #bbb;
         overflow: hidden;
     }
-
 }
 // mobile
 @media screen and (max-width : 786px) {
-  
-
     .section02_wrapper { flex-direction: column; }
-
     .sec02_article_left {
         position: relative;
         width: 100%;
@@ -785,7 +765,6 @@ $personal_color : #e60044;
         background: url(../img/section02_bg01_m.jpg)no-repeat 70% 50%;
         background-size: cover;
     }
-
     .sec02_right_con {
         padding-left: 0px;
         .sec02_article_right:nth-child(1) {
@@ -804,12 +783,8 @@ $personal_color : #e60044;
         left: 50px;
     }
     .sec02_text-block > div{ margin-bottom: 10px; }
-   
     .sec02_plus { display: none; }
     .sec02_plus_box { opacity: 1; }
-
-    .section03_text_wrapper { }
-
     .section03_img_wrapper {
         position: absolute;
         right: 0px;
@@ -850,6 +825,5 @@ $personal_color : #e60044;
             height: auto;
         }
     }
-
     .footer_item.second { display: none; }
 }

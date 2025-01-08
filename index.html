@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- fullpageJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.css">
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"></script>
@@ -21,8 +25,12 @@
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- fullpageJS -->
+    <script src="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
-<body>
+<body id="body">
     <header class="header">
         <span class="blind">헤더</span>
         <div class="header-inner">
@@ -32,12 +40,18 @@
                     <img src="https://www.hyundaiht.co.kr/kr/images/common/logo.svg">
                 </h1>
                 <div class="header_btn">
-                    <a class="header_btn--link" href="#">
-                        <p>PRODUCTS</p>
+                    <a class="header_btn--link" href="#" id="markets-btn">
+                        <p>STORE</p>
+                        <i class="fa-solid fa-shop" id="markets-ic"></i>
+                        <em></em>
                     </a>
-                    <a class="header_btn--link" href="#">
+                    <a class="header_btn--link" href="#" id="products-btn">
+                        <p>PRODUCTS</p>
+                        <em></em>
+                    </a>
+                    <a class="header_btn--link" href="#" id="lang-btn">
                         <p>KOREAN</p>
-                        <img src="./assets/icon/DownArrow.svg">
+                        <i class="fa-solid fa-angle-down"></i>
                     </a>
                     <button class="sitemap_btn">
                         <i id="side_menu_icon" class="fa-solid fa-bars"></i>
@@ -112,8 +126,8 @@
     </header>
 
 
-    <main class="wrapper">
-        <section class="section01">
+    <main class="wrapper" id="fullpage">
+        <section class="section section01">
 
             <article class="background_video_wrapper">
                 <div class="background_video">
@@ -172,10 +186,10 @@
                 <span>W</span>
                 <span>N</span>
 
-            </div>
+            </div>  
         </section>
 
-        <section class="section02">
+        <section class="section section02">
             <div class="section02_wrapper">
                 <article class="sec02_article_left">
                     <div class="sec02_text-block">
@@ -243,7 +257,7 @@
             </div>
         </section>
 
-        <section class="section03">
+        <section class="section section03">
             <div class="section03_wrapper">
                 <div class="section03_text_wrapper">
                     <div class="sec03_text_con">
@@ -284,12 +298,12 @@
 
         </section>
 
-        <section class="section04">
+        <section class="section section04">
             <div class="sec04_wrapper">
-                <div class="sec04_top">
-                    <ul class="sec04_top_list">
+                <div class="sec04_top swiper">
+                    <ul class="sec04_top_list swiper-wrapper">
 
-                        <li class="sec04_item">
+                        <li class="sec04_item swiper-slide">
                             <div class="black_bg"></div>
                             <div class="sec04_img_con"></div>
                             <div class="sec04_top_text">
@@ -299,7 +313,7 @@
                             </div>
                         </li>
 
-                        <li class="sec04_item">
+                        <li class="sec04_item swiper-slide">
                             <div class="black_bg"></div>
                             <div class="sec04_img_con"></div>
                             <div class="sec04_top_text">
@@ -308,7 +322,7 @@
                                 <small>2024.03.28</small>
                             </div>
                         </li>
-                        <li class="sec04_item">
+                        <li class="sec04_item swiper-slide">
                             <div class="black_bg"></div>
                             <div class="sec04_img_con"></div>
                             <div class="sec04_top_text">
@@ -317,7 +331,7 @@
                                 <small>2024.03.26</small>
                             </div>
                         </li>
-                        <li class="sec04_item">
+                        <li class="sec04_item swiper-slide">
                             <div class="black_bg"></div>
                             <div class="sec04_img_con"></div>
                             <div class="sec04_top_text">
@@ -369,7 +383,7 @@
         </section>
 
 
-        <section class="section05">
+        <section class="section section05">
             <div class="sec05_wrapper">
                 <div class="sec05_left_con">
                     <p class="title_red">Promotion Video</p>
@@ -400,8 +414,7 @@
         </section>
     </main>
 
-    <footer class="footer">
-
+    <footer class="section footer">
         <div class="footer_item first">
             <div class="footer-wrapper">
                 <div class="footer_left">

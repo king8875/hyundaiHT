@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import './common.css';
 @import './reset.css';
 .header {
@@ -9,6 +10,12 @@
   z-index: 1000;
 }
 
+.header-inner {
+  position: relative;
+  height: 100%;
+  padding: 0 43px;
+}
+
 .header_side {
   display: flex;
   justify-content: space-between;
@@ -17,8 +24,8 @@
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+  position: relative;
+  padding-top: 33px;
   z-index: 20;
 }
 .logo img {
@@ -32,28 +39,110 @@
   z-index: 20;
 }
 .header_btn .header_btn--link {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 45px;
+  justify-content: center;
+  gap: 5px;
+  width: 100px;
+  height: 40px;
+  margin-top: 30px;
   color: #fff;
   font-weight: 600;
+  font-size: 12px;
   padding: 0 10px;
-  background-color: var(--black);
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s;
 }
 
-.header_btn .header_btn--link:first-child {
+#markets-btn em::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #000;
+  display: block;
+  content: "STORE";
+  transition: all 0.3s;
+}
+
+#markets-btn {
+  display: flex;
+  flex-direction: column;
+  background: var(--black);
+}
+
+#markets-btn:hover {
+  background: #fff;
+  border: 1px solid var(--black);
+}
+
+#markets-btn:hover p {
+  transform: translateY(-30px);
+  transition: all 0.3s;
+}
+
+#markets-btn:hover em::after {
+  transform: translateY(-25px);
+  transition: all 0.3s;
+}
+
+#markets-btn #markets-ic {
+  display: none;
+}
+
+#products-btn {
   background: var(--main-color);
+}
+
+#products-btn em::after {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #000;
+  transition: all 0.3s;
+  content: "PRODUCTS";
+}
+
+#products-btn:hover {
+  background: #fff;
+  border: 1px solid #e60044;
+}
+
+#products-btn:hover p {
+  transform: translateY(-30px);
+  transition: all 0.3s;
+}
+
+#products-btn:hover em::after {
+  transform: translateY(-25px);
+  transition: all 0.3s;
+}
+
+#lang-btn {
+  background: var(--white);
+  color: #aaaaaa;
+}
+
+#lang-btn img {
+  display: flex;
+  color: #aaaaaa;
 }
 
 .sitemap_btn {
   width: 50px;
   height: 50px;
+  margin-top: 30px;
   background-color: transparent;
   color: #fff;
 }
 .sitemap_btn #side_menu_icon {
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .gnb {
@@ -65,8 +154,9 @@
 }
 
 .gnb_hover {
-  height: 500px;
+  height: 400px;
   background-color: var(--white);
+  transition: all 0.5s;
 }
 
 .gnb__list {
@@ -83,8 +173,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 180px;
-  padding-top: 90px;
+  width: 150px;
+  padding-top: 50px;
 }
 
 .gnb__item .gnb__title.white {
@@ -94,7 +184,7 @@
 .gnb02 {
   display: none;
   position: absolute;
-  top: 100px;
+  top: 50px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -111,6 +201,9 @@
   padding-top: 100px;
   color: black;
 }
+.gnb02 .gnb02_ul li {
+  cursor: grab;
+}
 
 .red_bg {
   position: absolute;
@@ -120,12 +213,45 @@
   height: 0;
   background-color: #e60044;
   z-index: -1;
-  transition: all 0.1s;
+  transition: all 0.4s;
 }
 
 .red_bg_hover {
-  height: 500px;
-  transition: all 0.1s;
+  height: 400px;
+  transition: all 0.3s;
+}
+
+#fullpage {
+  overflow: hidden !important;
+}
+
+#fp-nav.fp-right {
+  left: 17px;
+}
+
+#fp-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#fp-nav ul li a span {
+  margin: 0 !important;
+  width: 10px !important;
+  height: 10px !important;
+  background: transparent !important;
+  border-radius: 0px !important; /* 원형 */
+  border: 1px solid #000 !important;
+  transition: all 0.3s !important;
+}
+
+#fp-nav ul li a.active span {
+  background: #000 !important;
+  border: 1px solid #000;
+}
+
+.fp-watermark {
+  display: none;
 }
 
 @media screen and (max-width: 1400px) {
@@ -134,7 +260,41 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .header {
+    height: 50px;
+  }
+  .header-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 10px;
+  }
+  .logo {
+    padding-top: 0px;
+  }
+  .sitemap_btn {
+    width: 25px;
+    height: 25px;
+    margin-top: 0px;
+  }
+  .header_btn {
+    gap: 10px;
+    justify-content: end;
+  }
   .header_btn .header_btn--link {
+    gap: 0px;
+    width: 70px;
+    margin-top: 0px;
+  }
+  #markets-btn {
+    width: 50px;
+  }
+  #markets-btn #markets-ic {
+    display: block;
+    font-size: 18px;
+  }
+  #markets-btn p {
     display: none;
   }
 }/*# sourceMappingURL=layout.css.map */

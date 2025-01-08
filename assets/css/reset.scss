@@ -35,7 +35,9 @@ button { border: none; cursor: grab; }
 
 
 
-section { position: relative; }
+section { 
+    position: relative;
+}
 
 .bg_black { background-color: #000000; }
 .bg_white { background-color: #fff; }

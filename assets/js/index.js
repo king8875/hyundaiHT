@@ -1,5 +1,29 @@
 
 $(document).ready(function() {
+    
+   
+
+    
+
+    new fullpage('#fullpage', {
+        autoScrolling: true,
+        navigation: true,
+        scrollBar: true, 
+        anchors: ['section01', 'section02', 'section03', 'section04', 'section05', 'footer'],
+        responsiveWidth: 786, 
+
+        afterLoad: function(origin, destination, direction){
+            const nav = $('.fp-right');
+            const navDots = $('#fp-nav ul li a span'); 
+            const ActivenavDots = $('#fp-nav ul li a.active span'); 
+            if (destination.index === 0) {
+                navDots.hide(); 
+            } else {
+                navDots.show(); 
+            }
+        }
+    });
+
     const sec04Img = $('.sec04_top_list .sec04_item');
     const sections = $('section');
     let currentSectionIndex = 0;
@@ -76,4 +100,23 @@ $(document).ready(function() {
             })
         }
     });
+
+
+    const mm = gsap.matchMedia();
+    mm.add("(max-width:768px)",function(){
+        const section04 = new Swiper('.sec04_top.swiper',{
+            spaceBetween:0,
+            slidesPerView:4,
+       
+            breakpoints:{
+                1200: { slidesPerView:4 },
+                768:{ slidesPerView:2 },
+                0:{ slidesPerView:1 }
+            }
+        });
+    });
+
+
+
+
 });
