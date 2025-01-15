@@ -335,7 +335,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: plus01 0.3s;
 }
 .sec02_plus #plus_icon:hover {
   animation: plus 0.3s;

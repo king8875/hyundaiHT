@@ -1,10 +1,6 @@
 
 $(document).ready(function() {
     
-   
-
-    
-
     new fullpage('#fullpage', {
         autoScrolling: true,
         navigation: true,
@@ -61,13 +57,13 @@ $(document).ready(function() {
     });
 
 
-    // gsap.set('.header',{autoAlpha:0});
-    // const intro = gsap.timeline();
-    // intro.to('.header',{
-    //     delay:5,
-    //     autoAlpha:1,
-    //     duration:1
-    // });
+    gsap.set('.header',{autoAlpha:0});
+    const intro = gsap.timeline();
+    intro.to('.header',{
+        delay:5,
+        autoAlpha:1,
+        duration:1
+    });
 
     ScrollTrigger.create({
         trigger:".section02",
